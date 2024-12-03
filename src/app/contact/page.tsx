@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import ChatBot from '../components/ChatBot';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -93,6 +94,7 @@ export default function Contact() {
           <p>Horario de Atención: Lunes - Viernes, 9am - 5pm</p>
         </div>
       </div>
+      <ChatBot />
     </div>
   )
 }
