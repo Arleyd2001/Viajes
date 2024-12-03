@@ -5,12 +5,13 @@ const destinations = [
   {
     id: 1,
     name: 'Ibiza, España',
-    image: '/ibiza.jpg', // Asegúrate de tener una imagen atractiva de Ibiza
+    image: '/ibiza.jpg',
     description: 'Vive la experiencia única de las mejores fiestas, playas paradisíacas y eventos épicos en Ibiza.',
     price: 'Desde 5,287,500 COP',
-    link: '/destinations/ibiza',
+    file: '/docs/itinerario.pdf', // Ruta pública al archivo PDF
   }
-]
+];
+
 
 export default function Destinations() {
   return (
@@ -18,7 +19,7 @@ export default function Destinations() {
       <h1 className="text-4xl font-bold text-center mb-8">¡Vive Ibiza al máximo!</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {destinations.map((destination) => (
-          <Link key={destination.id} href={destination.link} className="group">
+          <div key={destination.id} className="group">
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="relative h-64">
                 <Image
@@ -33,11 +34,18 @@ export default function Destinations() {
                 <p className="text-gray-600 mb-4">{destination.description}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-blue-600 font-bold">{destination.price}</span>
-                  <span className="text-blue-600 group-hover:underline">¡Descúbrelo!</span>
+                  <a
+                  href={destination.file}
+                  download
+                  className="text-blue-600 group-hover:underline"
+                >
+                  ¡Descúbrelo!
+                </a>
+
                 </div>
               </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
 
