@@ -1,64 +1,41 @@
 import Image from 'next/image'
-import Link from 'next/link'
-import FeaturedSlider from './components/FeaturedSlider'
-import PopularDestinations from './components/PopularDestinations'
-import ChatBot from './components/ChatBot';
 
 export default function Home() {
   return (
-    <div className="pt-16">
-      <section className="relative h-[600px]">
-        <Image
-          src="/hero-image.jpg"
-          alt="Beautiful travel destination"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-          <div className="text-center text-white">
-            <h1 className="text-5xl font-bold mb-4">Discover Your Next Adventure</h1>
-            <p className="text-xl mb-8">Explore the world with Wanderlust Travel Agency</p>
-            <Link
-              href="/destinations"
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300"
-            >
-              Explore Destinations
-            </Link>
-          </div>
+    <div className="container mx-auto px-4 py-16">
+      {/* Sección principal de introducción */}
+      <div className="flex flex-col md:flex-row items-center">
+        <div className="w-full md:w-1/2">
+          <h1 className="text-4xl font-bold text-center md:text-left mb-4">
+            Bienvenido a Party and Sun Ibiza
+          </h1>
+          <p className="text-lg text-gray-600 mb-6">
+            Prepárate para la aventura definitiva en Ibiza, donde el sol brilla durante el día y las noches están llenas de energía vibrante. En Party and Sun Ibiza, nos especializamos en crear experiencias inolvidables para los amantes de la fiesta y los buscadores de adrenalina. Ya sea que vengas por fiestas de clase mundial, playas impresionantes o actividades llenas de emoción, nosotros nos encargamos de todo.
+          </p>
+          <p className="text-lg text-gray-600 mb-6">
+            Nuestra misión es simple: hacer que tu experiencia en Ibiza sea extraordinaria. Con itinerarios personalizados, acceso exclusivo a fiestas y aventuras llenas de adrenalina, nos aseguramos de que tu viaje sea uno que nunca olvidarás. Deja que el día brille y la noche vibre con nosotros.
+          </p>
         </div>
-      </section>
+        <div className="w-full md:w-1/2 mt-8 md:mt-0">
+          <Image
+            src="/ibiza-beach.jpg" // Imagen representativa de Ibiza, como una playa al atardecer o fiesta en la playa
+            alt="Playa de Ibiza"
+            width={500}
+            height={400}
+            className="object-cover rounded-lg shadow-lg"
+          />
+        </div>
+      </div>
 
-      <section className="py-16 bg-gray-100">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Featured Promotions</h2>
-          <FeaturedSlider />
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">Popular Destinations</h2>
-          <PopularDestinations />
-        </div>
-      </section>
-
-      <section className="py-16 bg-blue-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Start Your Journey?</h2>
-          <p className="text-xl mb-8">Book your dream vacation today and create unforgettable memories.</p>
-          <Link
-            href="/contact"
-            className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-full text-lg transition duration-300"
-          >
-            Contact Us Now
-          </Link>
-        </div>
-      </section>
-      <div>
-      {/* Your page content */}
-      <ChatBot />
-    </div>
+      {/* Lema de la agencia */}
+      <div className="text-center mt-16">
+        <h2 className="text-3xl font-semibold text-gray-800 mb-4">
+          Where the Day Shines and the Night Vibrates
+        </h2>
+        <p className="text-lg text-gray-600">
+          Party and Sun Ibiza no es solo una agencia de viajes. Somos tu puerta de entrada a una aventura electrizante. Desde fiestas en la playa al amanecer hasta la vida nocturna vibrante, creamos el equilibrio perfecto entre relajación y emoción.
+        </p>
+      </div>
     </div>
   )
 }
-

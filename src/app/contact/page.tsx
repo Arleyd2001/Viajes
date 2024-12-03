@@ -19,21 +19,21 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData)
-    // Reset form after submission
+    // Aquí normalmente enviarías los datos del formulario a tu backend
+    console.log('Formulario enviado:', formData)
+    // Resetear formulario después de enviar
     setFormData({ name: '', email: '', message: '' })
-    alert('Thank you for your message. We will get back to you soon!')
+    alert('¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.')
   }
 
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-center mb-8">Contact Us</h1>
+      <h1 className="text-4xl font-bold text-center mb-8">Contáctanos</h1>
       <div className="max-w-3xl mx-auto">
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700">
-              Name
+              Nombre
             </label>
             <input
               type="text"
@@ -47,7 +47,7 @@ export default function Contact() {
           </div>
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              Email
+              Correo Electrónico
             </label>
             <input
               type="email"
@@ -61,7 +61,7 @@ export default function Contact() {
           </div>
           <div>
             <label htmlFor="message" className="block text-sm font-medium text-gray-700">
-              Message
+              Mensaje
             </label>
             <textarea
               id="message"
@@ -78,22 +78,24 @@ export default function Contact() {
               type="submit"
               className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition duration-300"
             >
-              Send Message
+              Enviar Mensaje
             </button>
           </div>
         </form>
       </div>
+
       <div className="mt-16">
-        <h2 className="text-2xl font-bold text-center mb-4">Visit Us</h2>
+        <h2 className="text-2xl font-bold text-center mb-4">Visítanos</h2>
         <div className="text-center">
-          <p>123 Travel Street, Wanderlust City, 12345</p>
-          <p>Phone: (123) 456-7890</p>
-          <p>Email: info@wanderlustagency.com</p>
-          <p>Business Hours: Monday - Friday, 9am - 5pm</p>
+          <p>Calle 10 #25-45, Medellín, Colombia</p>
+          <p>Teléfono: +57 (4) 123-4567</p>
+          <p>Email: contacto@partyandsunibiza.com</p>
+          <p>Horario de Atención: Lunes - Viernes, 9am - 5pm</p>
         </div>
       </div>
     </div>
   )
 }
+
 
 

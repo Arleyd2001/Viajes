@@ -4,58 +4,18 @@ import Link from 'next/link'
 const destinations = [
   {
     id: 1,
-    name: 'Bali, Indonesia',
-    image: '/bali.jpg',
-    description: 'Experience the beauty of Bali with its stunning beaches, lush rice terraces, and vibrant culture.',
-    price: 'From $799',
-    link: '/destinations/bali',
-  },
-  {
-    id: 2,
-    name: 'Paris, France',
-    image: '/paris.jpg',
-    description: 'Discover the romance of Paris, from the iconic Eiffel Tower to world-class museums and charming cafes.',
-    price: 'From $699',
-    link: '/destinations/paris',
-  },
-  {
-    id: 3,
-    name: 'Santorini, Greece',
-    image: '/santorini.jpg',
-    description: 'Explore the breathtaking beauty of Santorini with its white-washed buildings and stunning sunsets.',
-    price: 'From $899',
-    link: '/destinations/santorini',
-  },
-  {
-    id: 4,
-    name: 'Tokyo, Japan',
-    image: '/tokyo.jpg',
-    description: "Immerse yourself in the unique blend of tradition and modernity in Tokyo, Japan's bustling capital.",
-    price: 'From $999',
-    link: '/destinations/tokyo',
-  },
-  {
-    id: 5,
-    name: 'New York City, USA',
-    image: '/new-york.jpg',
-    description: 'Experience the energy of the Big Apple with its iconic skyline, world-class entertainment, and diverse culture.',
-    price: 'From $799',
-    link: '/destinations/new-york',
-  },
-  {
-    id: 6,
-    name: 'Machu Picchu, Peru',
-    image: '/machu-picchu.jpg',
-    description: 'Discover the ancient wonders of Machu Picchu, nestled high in the Andes Mountains.',
-    price: 'From $1,299',
-    link: '/destinations/machu-picchu',
-  },
+    name: 'Ibiza, España',
+    image: '/ibiza.jpg', // Asegúrate de tener una imagen atractiva de Ibiza
+    description: 'Vive la experiencia única de las mejores fiestas, playas paradisíacas y eventos épicos en Ibiza.',
+    price: 'Desde 5,287,500 COP',
+    link: '/destinations/ibiza',
+  }
 ]
 
 export default function Destinations() {
   return (
     <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-center mb-8">Our Destinations</h1>
+      <h1 className="text-4xl font-bold text-center mb-8">¡Vive Ibiza al máximo!</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {destinations.map((destination) => (
           <Link key={destination.id} href={destination.link} className="group">
@@ -73,12 +33,69 @@ export default function Destinations() {
                 <p className="text-gray-600 mb-4">{destination.description}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-blue-600 font-bold">{destination.price}</span>
-                  <span className="text-blue-600 group-hover:underline">Learn More</span>
+                  <span className="text-blue-600 group-hover:underline">¡Descúbrelo!</span>
                 </div>
               </div>
             </div>
           </Link>
         ))}
+      </div>
+
+      {/* Sección de Información de Ibiza */}
+      <div className="my-16">
+        <h2 className="text-3xl font-semibold text-center mb-8">Información Útil sobre Ibiza</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Cultura */}
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-bold mb-4">Cultura</h3>
+            <p className="text-gray-600 mb-4">
+              La isla es famosa por su ambiente relajado y bohemio, ideal para disfrutar de fiestas épicas y explorar sitios históricos como Dalt Vila. ¡La fiesta nunca termina aquí!
+            </p>
+            <ul className="list-disc pl-5 text-gray-600">
+              <li>Fiesta Flower Power: Un evento lleno de música psicodélica y colores vibrantes.</li>
+              <li>Amnesia: Fiestas electrónicas con DJs internacionales hasta el amanecer.</li>
+            </ul>
+          </div>
+
+          {/* Gastronomía */}
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-bold mb-4">Gastronomía</h3>
+            <p className="text-gray-600 mb-4">
+              Prueba los platos típicos de la isla, como el Bullit de Peix y el Sofrit Pagès, perfectos para recargar energías antes de una noche de fiesta.
+            </p>
+            <ul className="list-disc pl-5 text-gray-600">
+              <li>Bullit de Peix: Un guiso de pescado fresco de la isla.</li>
+              <li>Sofrit Pagès: Un delicioso estofado que te dejará sin palabras.</li>
+              <li>Flaó: Un postre típico para ponerle el toque final a tu comida.</li>
+            </ul>
+          </div>
+
+          {/* Clima */}
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-bold mb-4">Clima</h3>
+            <p className="text-gray-600 mb-4">
+              Ibiza tiene un clima mediterráneo, ideal para disfrutar del sol y las fiestas durante todo el año. ¡Prepárate para el calor del verano y noches frescas!
+            </p>
+            <ul className="list-disc pl-5 text-gray-600">
+              <li>Verano: Lleva ropa ligera y protector solar para disfrutar de las playas y fiestas.</li>
+              <li>Invierno: Perfecto para escapar del frío, con temperaturas más frescas y menos turistas.</li>
+            </ul>
+          </div>
+
+          {/* Transporte */}
+          <div className="bg-white rounded-lg shadow-md p-6">
+            <h3 className="text-xl font-bold mb-4">Transporte</h3>
+            <p className="text-gray-600 mb-4">
+              Ibiza es fácil de recorrer, con opciones de transporte rápido y divertido, ¡ideal para moverse entre las fiestas y playas!
+            </p>
+            <ul className="list-disc pl-5 text-gray-600">
+              <li>Taxis y coches alquilados: Perfectos para moverte entre discotecas.</li>
+              <li>Fiestas flotantes: Vive la experiencia de la fiesta en alta mar.</li>
+              <li>Barcos a Formentera: Escápate a la isla vecina para continuar la aventura.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   )
