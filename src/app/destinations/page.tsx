@@ -1,56 +1,74 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import Slider from 'react-slick'
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const destinations = [
   {
     id: 1,
     name: 'Ibiza, España',
-    image: '/ibiza/ibiza.jpeg',
+    images: ['/ibiza2.jpeg', '/ibiza3.jpg', '/ibiza1.jpeg'],
     description: 'Vive la experiencia única de las mejores fiestas, playas paradisíacas y eventos épicos en Ibiza.',
     price: 'Desde 5,287,500 COP',
-    file: '/docs/itinerario.pdf', // Ruta pública al archivo PDF
+    file: '/docs/itinerario.pdf',
   }
 ];
 
+const ImageSlider = ({ images }) => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  };
+
+  return (
+    <Slider {...settings}>
+      {images.map((image, index) => (
+        <div key={index} className="relative h-[35vh]">
+          <Image
+            src={image}
+            alt={`Ibiza - Image ${index + 1}`}
+            fill
+            className="object-cover"
+          />
+        </div>
+      ))}
+    </Slider>
+  );
+};
+
 export default function Destinations() {
   return (
-    <div className="container mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-center mb-8">¡Vive Ibiza al máximo!</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {destinations.map((destination) => (
-          <div key={destination.id} className="group">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="relative h-64">
-                <Image
-                  src={destination.image}
-                  alt={destination.name}
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-              </div>
-              <div className="p-6">
-                <h2 className="text-2xl font-bold mb-2">{destination.name}</h2>
-                <p className="text-gray-600 mb-4">{destination.description}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-orange-500 font-extrabold text-lg">
-                    {destination.price}
-                  </span>
-                  <a
-                    href={destination.file}
-                    download
-                    className="text-white bg-gradient-to-r from-orange-500 to-red-600 px-4 py-2 rounded-md font-bold group-hover:from-orange-600 group-hover:to-red-700 transition-all duration-300"
-                  >
-                    ¡Descúbrelo!
-                  </a>
-                </div>
-              </div>
-            </div>
+    <div className="min-h-screen">
+      <div className="relative mb-8">
+        <ImageSlider images={destinations[0].images} />
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-white p-4">
+          <h1 className="text-4xl font-bold mb-2 text-center">¡Vive Ibiza al máximo!</h1>
+          <p className="text-lg mb-4 text-center max-w-xl">{destinations[0].description}</p>
+          <div className="flex items-center space-x-4">
+            <span className="text-orange-500 font-extrabold text-xl">
+              {destinations[0].price}
+            </span>
+            <a
+              href={destinations[0].file}
+              download
+              className="text-white bg-gradient-to-r from-orange-500 to-red-600 px-4 py-2 rounded-md font-bold hover:from-orange-600 hover:to-red-700 transition-all duration-300 text-base"
+            >
+              ¡Descúbrelo!
+            </a>
           </div>
-        ))}
+        </div>
       </div>
 
       {/* Sección de Información de Ibiza */}
-      <div className="my-16">
+      <div className="container mx-auto px-4 py-16">
         <h2 className="text-3xl font-semibold text-center mb-8">Información Útil sobre Ibiza</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -108,3 +126,4 @@ export default function Destinations() {
     </div>
   );
 }
+

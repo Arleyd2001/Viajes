@@ -22,3 +22,32 @@ body {
     background-color: #f7f9f1;
     color: #333;
 }
+
+.slick-slider {
+  margin-bottom: 0;
+}
+
+.slick-dots {
+  bottom: 10px;
+}
+
+.slick-dots li button:before {
+  color: white;
+}
+
+.slick-prev, .slick-next {
+  z-index: 1;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 24px;
+}
+
