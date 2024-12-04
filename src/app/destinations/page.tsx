@@ -12,7 +12,6 @@ const destinations = [
   }
 ];
 
-
 export default function Destinations() {
   return (
     <div className="container mx-auto px-4 py-16">
@@ -33,15 +32,16 @@ export default function Destinations() {
                 <h2 className="text-2xl font-bold mb-2">{destination.name}</h2>
                 <p className="text-gray-600 mb-4">{destination.description}</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-blue-600 font-bold">{destination.price}</span>
+                  <span className="text-orange-500 font-extrabold text-lg">
+                    {destination.price}
+                  </span>
                   <a
-                  href={destination.file}
-                  download
-                  className="text-blue-600 group-hover:underline"
-                >
-                  ¡Descúbrelo!
-                </a>
-
+                    href={destination.file}
+                    download
+                    className="text-white bg-gradient-to-r from-orange-500 to-red-600 px-4 py-2 rounded-md font-bold group-hover:from-orange-600 group-hover:to-red-700 transition-all duration-300"
+                  >
+                    ¡Descúbrelo!
+                  </a>
                 </div>
               </div>
             </div>
@@ -106,6 +106,5 @@ export default function Destinations() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

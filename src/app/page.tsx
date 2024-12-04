@@ -17,13 +17,15 @@ export default function Home() {
           </p>
         </div>
         <div className="w-full md:w-1/2 mt-8 md:mt-0">
-          <Image
-            src="/ibiza-beach.jpg" // Imagen representativa de Ibiza, como una playa al atardecer o fiesta en la playa
-            alt="Playa de Ibiza"
+          <video
+            src="/videos/ibiza-promo.mp4" // Coloca el nombre de tu video aquí
             width={500}
             height={400}
             className="object-cover rounded-lg shadow-lg"
-          />
+            controls
+          >
+            Tu navegador no soporta la etiqueta de video.
+          </video>
         </div>
       </div>
 
@@ -39,3 +41,4 @@ export default function Home() {
     </div>
   )
 }
+
