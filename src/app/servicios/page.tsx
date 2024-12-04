@@ -4,35 +4,35 @@ const services = [
   {
     id: 1,
     title: 'Planificación Personalizada',
-    image: '/planificacion.jpg', // Imagen de alta calidad relacionada con planificación (por ejemplo, mapa, itinerarios)
+    image: '/ibiza/planificacion.jpeg',
     description:
       'Crea tu itinerario a medida. Ya sea que busques relajarte en la playa, explorar los mercados hippies, o sumergirte en la vida nocturna, te ayudamos a diseñar el viaje perfecto para ti y tu grupo.',
   },
   {
     id: 2,
     title: 'Recomendaciones Exclusivas',
-    image: '/recomendaciones.jpg', // Imagen relacionada con la vida nocturna, restaurantes, fiestas exclusivas
+    image: '/ibiza/recomendaciones.jpeg', 
     description:
       'Te damos acceso a las mejores fiestas, restaurantes secretos y actividades locales que no encontrarás en guías turísticas. ¡Solo lo mejor para nuestros viajeros más aventureros!',
   },
   {
     id: 3,
     title: 'Excursiones Privadas',
-    image: '/excursiones.jpg', // Imagen de excursiones en Ibiza, como barcos o visitas privadas
+    image: '/ibiza/excursiones.jpeg',
     description:
       'Descubre Ibiza desde una perspectiva diferente con nuestras excursiones privadas. Navega hacia Formentera, haz deportes acuáticos, o disfruta de un tour personalizado por las mejores playas.',
   },
   {
     id: 4,
     title: 'Transporte VIP',
-    image: '/transporte.jpg', // Imagen de vehículos de lujo o transporte privado
+    image: '/ibiza/transporte.jpeg',
     description:
       'Disfruta de transporte VIP con servicios exclusivos. Te llevamos directamente a donde necesitas estar, ya sea para llegar a una fiesta a tiempo o explorar la isla cómodamente.',
   },
   {
     id: 5,
     title: 'Asesoría 24/7',
-    image: '/asesoria.jpg', // Imagen de un servicio al cliente, teléfono o chat
+    image: '/ibiza/asesoria.jpeg',
     description:
       '¿Necesitas ayuda en cualquier momento? Nuestro equipo está disponible 24/7 para resolver dudas, realizar ajustes en tu itinerario o recomendarte lugares únicos durante tu viaje.',
   },
@@ -41,6 +41,22 @@ const services = [
 export default function Services() {
   return (
     <div className="container mx-auto px-4 py-16">
+    {/* Contenedor del podcast */}
+    <div className="bg-gradient-to-r from-orange-400 to-pink-500 text-white rounded-lg p-8 shadow-md mb-16">
+      <h2 className="text-3xl font-bold mb-4">🎧 Escucha nuestro Podcast</h2>
+      <p className="text-lg mb-6">
+        Descubre todo sobre cómo disfrutar Ibiza al máximo: consejos, itinerarios, y secretos exclusivos de Party and Sun Ibiza.
+      </p>
+      <a
+        href="https://murf.ai/share/m49b9zmt" 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block bg-white text-orange-500 font-bold py-2 px-4 rounded hover:bg-gray-200 transition"
+      >
+        Escuchar Ahora
+      </a>
+    </div>
+
       <h1 className="text-4xl font-bold text-center mb-8">Servicios Personalizados para Tu Aventura en Ibiza</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service) => (

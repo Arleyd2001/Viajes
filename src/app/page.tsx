@@ -28,6 +28,17 @@ export default function Home() {
           </video>
         </div>
       </div>
+        {/* Sección para la canción MP3 */}
+        <div className="text-center mt-8">
+          <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+            Escucha el ritmo de Ibiza
+          </h3>
+          <audio controls className="w-full md:w-1/2 mx-auto">
+            <source src="/audio/ibiza-beats.mp3" type="audio/mp3" />
+            Tu navegador no soporta la etiqueta de audio.
+          </audio>
+        </div>
+
 
       {/* Lema de la agencia */}
       <div className="text-center mt-16">

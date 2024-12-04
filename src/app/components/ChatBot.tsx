@@ -15,28 +15,6 @@ interface AgricultureResponses {
 
 const agricultureResponses: AgricultureResponses = {
   "plagas": "Para controlar plagas, combina técnicas como el manejo integrado de plagas (MIP), trampas biológicas, uso de insectos benéficos y pesticidas naturales como el aceite de neem.",
-  "agua": "Para una gestión eficiente del agua, utiliza riego por goteo, cosecha de agua de lluvia, y mantén la humedad del suelo con técnicas como el acolchado.",
-  "suelo": "Mejora la productividad del suelo utilizando abonos orgánicos, compost, y realiza análisis periódicos para ajustar la fertilización según las necesidades del cultivo.",
-  "gracias": "¡De nada! Estoy aquí para ayudarte con cualquier duda sobre agricultura. ¿Hay algo más en lo que pueda asistirte?",
-  "adios": "¡Hasta luego! Recuerda que la agricultura sostenible es clave para el futuro. ¡Sigue cultivando con conciencia!",
-  "riego": "El riego por goteo optimiza el uso del agua y reduce el estrés hídrico de las plantas. Considera el uso de sensores de humedad para optimizar los tiempos de riego.",
-  "fertilizantes": "Usa fertilizantes orgánicos como estiércol, compost o biofertilizantes para mejorar la salud del suelo y reducir la dependencia de productos químicos.",
-  "clima": "Consulta previsiones climáticas para ajustar el riego, la siembra y la cosecha. Planifica barreras naturales o sistemas de protección en caso de climas extremos.",
-  "rotacion de cultivos": "La rotación de cultivos mejora la salud del suelo, ayuda a reducir plagas, y favorece la retención de nutrientes al alternar plantas de diferentes familias.",
-  "control biologico": "Aplica control biológico con insectos benéficos como mariquitas, o introduce hongos y bacterias que combatan las plagas sin perjudicar a los cultivos.",
-  "cosecha": "Realiza la cosecha en el punto óptimo de maduración. Asegúrate de tener las herramientas y el personal adecuados para minimizar las pérdidas.",
-  "invernaderos": "Los invernaderos permiten extender la temporada de cultivo y proteger los cultivos de plagas y condiciones climáticas desfavorables.",
-  "poda": "La poda mejora la ventilación y la exposición solar de las plantas, lo que favorece su crecimiento y previene enfermedades fúngicas.",
-  "conservacion de agua": "Aplica técnicas como el uso de mantillo y la siembra directa para conservar agua y evitar la erosión del suelo.",
-  "biodiversidad": "Fomenta la biodiversidad plantando variedades de cultivos que atraigan polinizadores, y practica la agroforestería para mejorar el ecosistema agrícola.",
-  "cultivos de cobertura": "Los cultivos de cobertura protegen el suelo entre temporadas, mejoran su estructura y previenen la erosión.",
-  "tecnologia agricola": "La agricultura de precisión permite un uso más eficiente de recursos como agua y fertilizantes mediante el análisis de datos y el uso de drones.",
-  "siembra directa": "La siembra directa reduce la erosión del suelo, mejora la retención de humedad y requiere menos trabajo, siendo una opción sostenible para grandes extensiones.",
-  "abono verde": "Utiliza abonos verdes como leguminosas para enriquecer el suelo con nitrógeno y mejorar su estructura entre las temporadas de siembra.",
-  "agroforesteria": "La agroforestería combina árboles y cultivos para mejorar la biodiversidad, proteger el suelo y proporcionar sombra a los cultivos más delicados.",
-  "polinizacion": "Fomenta la polinización natural instalando hábitats para abejas y otros polinizadores. Esto aumentará el rendimiento de tus cultivos.",
-  "desarrollo sostenible": "Implementa prácticas agrícolas sostenibles como la rotación de cultivos, la reducción del uso de químicos y la conservación del agua para proteger el medio ambiente a largo plazo.",
-  "agricultura sostenible": "La agricultura sostenible es un enfoque que busca maximizar la producción de alimentos de manera eficiente, respetando el medio ambiente, conservando los recursos naturales y promoviendo el bienestar de las comunidades agrícolas.",
   "innovacion agricola": "Adopta innovaciones como sensores de humedad, inteligencia artificial para el análisis de datos de cultivo y maquinaria autónoma para mejorar la productividad."
 };
 

@@ -5,7 +5,7 @@ const destinations = [
   {
     id: 1,
     name: 'Ibiza, España',
-    image: '/ibiza.jpg',
+    image: '/ibiza/ibiza.jpeg',
     description: 'Vive la experiencia única de las mejores fiestas, playas paradisíacas y eventos épicos en Ibiza.',
     price: 'Desde 5,287,500 COP',
     file: '/docs/itinerario.pdf', // Ruta pública al archivo PDF

@@ -12,7 +12,7 @@ const Header = () => {
         {/* Logo con icono */}
         <Link href="/" className="flex items-center space-x-4"> 
           <img
-            src="/icono.jpeg" // Ruta al icono en la carpeta public
+            src="ibiza/icono.jpeg" // Ruta al icono en la carpeta public
             alt="Logo de Party & Sun Ibiza"
             className="w-20 h-20 object-cover"
           />

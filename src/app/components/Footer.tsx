@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-wrap justify-between">
           {/* Información de la agencia */}
           <div className="w-full md:w-1/3 mb-6 md:mb-0">
-            <h3 className="text-2xl font-bold mb-3">Wanderlust Travel Agency</h3>
+            <h3 className="text-2xl font-bold mb-3">Party & Sun Ibiza Travel Agency</h3>
             <p className="text-sm text-orange-200">
               Donde comienza tu próxima aventura. Explora destinos únicos y crea recuerdos inolvidables con nosotros.
             </p>
@@ -78,7 +78,7 @@ const Footer = () => {
 
         {/* Derechos reservados */}
         <div className="mt-8 border-t border-orange-300 pt-4 text-center text-sm text-orange-200">
-          © {new Date().getFullYear()} Wanderlust Travel Agency. Todos los derechos reservados.
+          © {new Date().getFullYear()} Party & Sun Ibiza Travel Agency. Todos los derechos reservados.
         </div>
       </div>
     </footer>

@@ -9,7 +9,7 @@ export const metadata = {
   title: 'Party and Sun Ibiza Travel Agency',
   description: 'Discover your next adventure with Wanderlust Travel Agency',
   icons: {
-    icon: '/icono.jpeg', // Ruta a tu favicon
+    icon: 'ibiza/icono.jpeg', // Ruta a tu favicon
   },
 }
 export default function RootLayout({
