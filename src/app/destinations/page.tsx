@@ -6,6 +6,11 @@ import Slider from 'react-slick'
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
+// Define el tipo para las propiedades (props)
+interface ImageSliderProps {
+  images: string[]; // Especifica que 'images' es un arreglo de strings
+}
+
 const destinations = [
   {
     id: 1,
@@ -17,7 +22,7 @@ const destinations = [
   }
 ];
 
-const ImageSlider = ({ images }) => {
+const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -126,4 +131,3 @@ export default function Destinations() {
     </div>
   );
 }
-
